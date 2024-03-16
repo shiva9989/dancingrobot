@@ -1,0 +1,195 @@
+.main{
+    border: 3px solid black;
+    height: 500px;
+    margin-top: 100px;
+    background: black;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: -1;
+}
+
+
+.face{
+    background: chartreuse;
+    height: 150px;
+    width: 150px;
+    border-radius: 50% 50% 0 0;
+    margin: auto;
+    margin-top: 20px;
+}
+
+
+.eyes{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 100px;
+}
+
+
+.leye,.reye{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: black;
+}
+
+
+.body1{
+    display: flex;
+    justify-content: space-evenly;
+    width: 250px;
+    margin: auto;
+    margin-top: 10px;
+    z-index: 2;
+}
+
+
+.larm{
+    height: 75px;
+    width: 25px;
+    background: chartreuse;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+
+
+.center{
+    height: 150px;
+    width: 150px;
+    background: chartreuse;
+    border-radius: 0 0 40% 40%;
+    display: flex;
+    justify-content: space-around;
+    z-index: 2;
+}
+
+
+.rarm{
+    height: 75px;
+    width: 25px;
+    background: chartreuse;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+.legs{
+    display: flex;
+    justify-content: space-evenly;
+    width: 150px;
+    margin: auto;
+    margin-top: -20px;  
+}
+
+
+.lleg{
+    height: 75px;
+    width: 25px;
+    background: chartreuse;
+    border-radius: 50px;
+    z-index: 1;
+}
+h1{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background: black;
+}
+.rleg{
+    height: 75px;
+    width: 25px;
+    background: chartreuse;
+    border-radius: 50px;
+}
+.lstrip,.rstrip{
+    height: 150px;
+    width: 5px;
+    /* background: black; */
+}
+.main:hover .face{
+    transition: ease-in-out;
+    animation: changeface  1s 0.1s infinite;
+
+}
+@keyframes changeface{
+    0%{
+        transition: ease-in-out;
+        transform: translateX(-30px);
+    }
+    50%{
+        transition: ease-in-out;
+        transform: translateX(30px);
+    }
+  
+    100%{
+        transition: ease-in-out;
+        transform: translateX(-30px);
+    }
+}
+.main:hover .center{
+    transition: ease-in-out;
+    animation: movebody 1s 0.1s infinite;
+} 
+@keyframes movebody{
+    0%{
+        transition: ease-in-out;
+     
+        
+        transform: scale(1.0);
+
+    }
+   
+    50%{
+        transition: ease-in-out;
+        
+        transform: scale(1.1);
+      
+    }
+    100%{
+        transition: ease-in-out;
+       
+        transform: scale(1.0);
+       
+    }
+}
+.main:hover .larm{
+    transform-origin: top center;
+    animation: movearms 1s 0.1s infinite;
+
+}
+@keyframes movearms{
+    0%{
+        transform: rotate(-90deg);
+    }
+    50%{
+        transform: rotate(90deg);
+    }
+    100%{
+        transform: rotate(-90deg);
+    }
+}
+.main:hover .rarm{
+    transform-origin: top center;
+    animation: movearms 1s 0.1s infinite;
+
+}
+.main:hover .lleg{
+    transition: ease-in-out;
+    animation: moveleg 1s 0.1s infinite;
+}
+@keyframes moveleg{
+    0%{
+        transition: ease-in-out;
+        transform: translate(10px,10px);
+    }
+    50%{
+        transition: ease-in-out;
+        transform: translate(-10px,-10px);
+    }
+    100%{
+        transition: ease-in-out;
+        transform: translate(10px,10px);
+
+    }
+
+
+}
